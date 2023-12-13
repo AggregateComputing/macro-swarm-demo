@@ -1,0 +1,36 @@
+incarnation: scafi
+
+launcher:
+  type: SingleRunSwingUI
+
+seeds:
+  scenario: 0
+  simulation: 0
+
+network-model:
+  type: ConnectWithinDistance
+  parameters: [350]
+
+_reactions:
+  - program: &program
+      - time-distribution:
+          type: DiracComb
+          parameters: [ 0, 1 ]
+        type: Event
+        actions:
+          - type: RunScafiProgram
+            parameters: [example.SimpleMovement, 1.0]
+      - program: send
+  - move: &move
+      - time-distribution:
+          type: DiracComb
+          parameters: [ 0, 1 ]
+        type: Event
+        actions: { type: MoveToTarget, parameters: [ destination, 10 ] }
+
+deployments:
+  type: Grid
+  parameters: [0, 0, 1000, 1000, 300, 300, 25, 25]
+  programs:
+    - *program
+    - *move
