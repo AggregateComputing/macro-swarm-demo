@@ -30,7 +30,7 @@ _reactions:
 
 deployments:
   type: Grid
-  parameters: [0, 0, 1000, 1000, 300, 300, 25, 25]
+  parameters: [-500, -500, 500, 500, 300, 300, 25, 25]
   programs:
     - *program
     - *move
