@@ -13,18 +13,14 @@ network-model:
 
 _reactions:
   - program: &program
-      - time-distribution:
-          type: DiracComb
-          parameters: [ 0, 1 ]
+      - time-distribution: 1
         type: Event
         actions:
           - type: RunScafiProgram
             parameters: [example.SimpleMovement, 1.0]
       - program: send
   - move: &move
-      - time-distribution:
-          type: DiracComb
-          parameters: [ 0, 1 ]
+      - time-distribution: 1
         type: Event
         actions: { type: MoveToTarget, parameters: [ destination, 10 ] }
 
