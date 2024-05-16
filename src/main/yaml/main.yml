@@ -3,10 +3,6 @@ incarnation: scafi
 launcher:
   type: SingleRunSwingUI
 
-seeds:
-  scenario: 0
-  simulation: 0
-
 network-model:
   type: ConnectWithinDistance
   parameters: [350]
@@ -27,6 +23,4 @@ _reactions:
 deployments:
   type: Grid
   parameters: [-500, -500, 500, 500, 300, 300, 25, 25]
-  programs:
-    - *program
-    - *move
+  programs: [ *program, *move ]
