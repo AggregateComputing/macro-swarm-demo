@@ -1,11 +1,8 @@
 incarnation: scafi
 
-launcher:
-  type: SingleRunSwingUI
+launcher: { type: SingleRunSwingUI }
 
-network-model:
-  type: ConnectWithinDistance
-  parameters: [350]
+network-model: { type: ConnectWithinDistance, parameters: [350] }
 
 _reactions:
   - program: &program
