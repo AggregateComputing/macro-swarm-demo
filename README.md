@@ -15,3 +15,4 @@ The application is composed of the following files:
 - `src/main/scala/example/SimpleMovement`: a simple macro swarm application with brownian motion
 - `src/main/yaml/main.yml`: the configuration file for the presented simulation
 
+Please, for more details about MacroSwarm refer to the [documentation](https://scafi.github.io/macro-swarm/)

@@ -6,7 +6,7 @@ import it.unibo.scafi.space.Point3D
 
 class SimpleMovement extends MacroSwarmProgram // define a program that supports the movement in alchemist env
   with StandardSensors with TimeUtils // standard AC API (sensing and time)
-  with ScafiAlchemistSupport // help for alchemist
+  with ScafiAlchemistSupport // helper for alchemist
   // library for basic movement
   with BaseMovementLib {
 
