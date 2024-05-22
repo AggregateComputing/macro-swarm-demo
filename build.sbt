@@ -5,7 +5,7 @@ val alchemistClass = "it"
 lazy val root = (project in file("."))
   .settings(
     name := "macro-swarm-demo",
-    libraryDependencies += "it.unibo.scafi" %% "macro-swarm-alchemist" % "1.4.1"
+    libraryDependencies += "it.unibo.scafi" %% "macro-swarm-alchemist" % "1.5.3"
   )
 Compile / mainClass := Some("it.unibo.alchemist.Alchemist")
 run / mainClass := Some("it.unibo.alchemist.Alchemist")

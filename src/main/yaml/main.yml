@@ -1,7 +1,10 @@
 # Define the incarnation of the simulation
 incarnation: scafi
-# Define the launcher, in this case a Swing UI
-launcher: { type: SingleRunSwingUI }
+# Define the launcher, standard one
+launcher: { parameters: { batch: [], autoStart: false } }
+# Attach the GUI to the simulator
+monitors: { type: SwingGUI, parameters: { graphics: src/main/resources/effect.json } }
+
 # Define how the nodes are connected, in this case within a distance of 350 units
 network-model: { type: ConnectWithinDistance, parameters: [350] }
 # Define the behaviour of the nodes
